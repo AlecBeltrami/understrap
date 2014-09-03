@@ -92,6 +92,15 @@ add_action( 'widgets_init', 'understrap_widgets_init' );
  * Enqueue scripts and styles.
  */
 function understrap_scripts() {
+
+	// Bootstrap / JQuery
+	wp_enqueue_style( ‘bootstrap’, get_template_directory_uri() . ‘/css/bootstrap.css’, array( ), false, ‘all’ );
+	
+	wp_enqueue_script(‘jquery’);
+	
+	wp_enqueue_script( ‘bootstrap’, get_template_directory_uri() . ‘/js/bootstrap.js’, array( ), false, ‘all’ );
+
+	// Underscore
 	wp_enqueue_style( 'understrap-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'understrap-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
