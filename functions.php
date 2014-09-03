@@ -94,11 +94,11 @@ add_action( 'widgets_init', 'understrap_widgets_init' );
 function understrap_scripts() {
 
 	// Bootstrap / JQuery
-	wp_enqueue_style( ‘bootstrap’, get_template_directory_uri() . ‘/css/bootstrap.css’, array( ), false, ‘all’ );
+	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.css', array(), false, 'all' );
 	
-	wp_enqueue_script(‘jquery’);
+	wp_enqueue_script('jquery');
 	
-	wp_enqueue_script( ‘bootstrap’, get_template_directory_uri() . ‘/js/bootstrap.js’, array( ), false, ‘all’ );
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.js', array(), false, 'all' );
 
 	// Underscore
 	wp_enqueue_style( 'understrap-style', get_stylesheet_uri() );
@@ -116,7 +116,7 @@ add_action( 'wp_enqueue_scripts', 'understrap_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -137,3 +137,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Register Custom Navigation Walker for Bootstrap (2.0.4)
+ */
+require_once('/inc/wp_bootstrap_navwalker.php');

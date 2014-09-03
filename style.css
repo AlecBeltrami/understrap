@@ -430,6 +430,9 @@ a:active {
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
+
+/*
+
 .main-navigation {
 	clear: both;
 	display: block;
@@ -496,7 +499,6 @@ a:active {
 .main-navigation .current-menu-item a {
 }
 
-/* Small menu */
 .menu-toggle {
 	display: none;
 }
@@ -511,6 +513,8 @@ a:active {
 		display: none;
 	}
 }
+
+*/
 
 .site-main .comment-navigation,
 .site-main .paging-navigation,
